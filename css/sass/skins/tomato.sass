@@ -1,0 +1,90 @@
+@import "../bourbon/bourbon"
+
+$color: #FF6347 //Theme skin
+$text_color: #888
+$main_color: #222
+$bg_light: #FAFAFA
+
+@mixin kerning($kerning)
+	letter-spacing: $kerning + px
+
+body
+	color: $main_color
+	+kerning(1)
+
+a
+	color: $color
+
+p
+	color: $text_color
+
+.color_element
+	color: $color
+.color_bg
+	background-color: $color
+.color_border
+	border-color: $color
+.main_color_bg
+	background-color: $main_color
+	color: white
+	.line
+		background-color: white
+.bg_light
+	background-color: $bg_light	
+
+.main_menu
+	a:hover
+		color: #F0E68C
+		background-color: rgba(255,255,255,0.1)
+	a	
+		+kerning(4)
+.top_text
+	p
+		color: #F5F5F5
+		+kerning(5)
+.about_m
+	span	
+		+kerning(4)	
+footer .container .row
+	color: $text_color
+	font-weight: 300
+	+kerning(0)		
+.about_m h3
+	color: $text_color
+	+kerning(2)
+.first
+	color: #4682B4
+.about_m .content h2
+	color: #696969	
+	+kerning(2)
+.about_m ul
+	color: $text_color	
+.about_m ul li a
+	color: #4682B4	
+.resume_m
+	color: $main_color
+.resume_m h3
+	+kerning(1)
+	font-size: 15px
+	font-weight: 600
+	text-transform: uppercase		
+.year
+	background-color: #4682B4
+	color: #fff	
+.portfolio_m
+	li
+		color: $text_color
+		+kerning(2)
+		&.active
+			color: #fff	
+			border-bottom: 1px solid #4682B4
+	.p_item_hover
+		h3
+			color: #fff
+			+kerning(2)
+		a
+			border: 1px solid #4682B4
+			color: #4682B4
+			background-color: transparent	
+.p_item_description
+	background-color: #fff

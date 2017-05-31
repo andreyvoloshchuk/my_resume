@@ -1,0 +1,340 @@
+@import "bourbon/bourbon"
+
+body
+	font-family: "Raleway", sans-serif
+	font-weight: normal
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.42857
+	-webkit-font-smoothing: antialised
+	overflow-x: hidden
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: red
+body input:required:valid,
+body textarea:required:valid
+	color: green
+.hidden
+	display: none
+
+
+section,
+.main_head
+	position: relative
+
+.main_head
+	height: 620px
+	padding-top: 20px
+.loader
+	background: none repeat scroll 0 0 #ffffff
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+
+.loader_inner
+	background-image: url("../img/preloader.gif")
+	background-repeat: no-repeat
+	background-size: cover
+	background-color: #fff
+	height: 60px
+	width: 60px
+	margin-top: -30px
+	margin-left: -30px
+	left: 50%
+	top: 50%
+	position: absolute	
+
+.logo_container
+	float: left
+
+.logo_container img
+	width: 80px
+	height: 80px
+	position: absolute
+	z-index: 100
+
+$w: 60px
+$h: 3px
+$line_color: #D3D3D3
+
+.menu
+	width: $w
+	height: $w
+	position: fixed
+	z-index: 200
+	right: 20px
+	top: 20px
+	background-color: #333
+	border-radius: 8px
+	.top
+		width: $w/2
+		height: $h
+		margin: 0 auto
+		position: relative
+		top: $h*7
+		background-color: $line_color
+		border-radius: 4px
+		transition: 1s
+	.mid
+		position: relative
+		top: $h*9
+		width: $w/2
+		height: $h
+		margin: 0 auto
+		background-color: $line_color
+		border-radius: 4px
+		transition: 1s
+	.bot
+		position: relative
+		top: $h*11
+		width: $w/2
+		height: $h
+		margin: 0 auto
+		background-color: $line_color
+		border-radius: 4px
+		transition: 0.5s
+		
+
+.active
+	.top
+		top: 28px
+		transform: rotate(130deg)
+	.mid
+		top: 25px
+		transform: rotate(-130deg)
+	.bot
+		opacity: 0
+		top: 0
+		transform: rotate(180deg)
+
+.menu:hover
+	cursor: pointer
+.main_menu
+	position: fixed
+	width: 100%
+	height: 100%
+	background-color: rgba(0,0,0,0.9)
+	z-index: 150
+	right: 0
+	top: 0
+	display: none
+	ul,li
+		list-style-type: none
+		padding: 0
+		margin: 0
+	ul
+		margin-top: 160px
+		text-align: center
+		li
+			&:nth-child(1) a
+				+animation-duration(.5s)
+			&:nth-child(2) a
+				+animation-duration(1s)
+			&:nth-child(3) a
+				+animation-duration(1.5s)
+			&:nth-child(4) a
+				+animation-duration(2s)
+			a
+				color: #fff
+				display: inline-block
+				width: 100%
+				padding: 20px 0
+				text-transform: uppercase
+				font-size: 13px
+			//	+transition(all 0.3s ease)
+			
+.top_wrap
+	display: table
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+	z-index: 10
+	.top_descr
+		display: table-row
+		.top_center
+			display: table-cell	
+			text-align: center
+			vertical-align: middle
+			.top_text
+				display: inline-block
+				h1
+					display: inline-block
+					padding: 10px 70px
+					color: #fff
+					border: 8px solid #fff
+					text-transform: uppercase
+					font-weight: 600 
+					font-size: 40px
+					letter-spacing: 1px
+					+animation-delay(.8s)
+				p
+					margin: 0
+					text-transform: uppercase
+					+animation-delay(.8s)
+.text_opacity
+	opacity: 0.3
+	+transition(all 0.25s ease)	
+
+section
+	padding: 30px 0 80px
+	h2,span
+		display: block
+		text-align: center
+		text-transform: uppercase
+		margin: 0 0 15px
+	h2
+		font-size: 24px
+	span
+		font-size: 12px
+		font-weight: 600
+
+.line
+	width: 150px
+	height: 1px
+	background-color: black
+	margin: 0 auto
+	margin-top: 40px	
+.content
+	margin-top: 30px
+	line-height: 23px
+
+.main_footer
+	padding: 50px 0	
+	font-size: 13px
+.about_m h3
+	text-align: center
+	text-transform: uppercase
+	font-size: 13px
+	font-weight: 500
+.about_m p
+	font-size: 14px	
+.first
+	display: inline-block
+	margin-bottom: 30px
+.content h2,
+	font-size: 13px
+	font-weight: 800
+	margin-top: 30px
+	margin-bottom: 30px
+.about_m ul
+	list-style-type: none
+	padding-left: 0px
+.about_m li
+	font-size: 12px
+	margin-bottom: 10px	
+.social_wrap ul li
+	display: inline-block
+	margin-top: 10px
+.social_wrap ul li a
+	display: inline-block
+.person
+	margin-bottom: 40px	
+.person img
+	max-width: 300px
+	border-radius: 50%
+	display: block
+	margin: 0 auto
+	margin-top: 70px
+
+#about
+	+transition(all 2s ease)	
+.resume_m .left
+	text-align: right
+	border-right: #666 solid 1px
+.resume_m .right
+	text-align: left	
+.resume_m h3
+	font-size: 15px
+	font-weight: 600
+	text-transform: uppercase
+.resume_m .right h3
+	display: block
+	padding-top: 10px
+	padding-bottom: 13px
+.resume_m i
+	display: block
+	font-size: 40px
+	margin-bottom: 30px
+.resume_m .year
+	display: inline-block
+	padding: 5px 10px
+	margin-bottom: 20px
+	font-style: italic
+	font-weight: 600	
+.resume_m .description
+	font-weight: 600
+	font-size: 14px	
+.portfolio_m 
+	padding-top: 70px
+	ul
+		text-align: center
+		margin-top: 70px
+		li
+			list-style-type: none
+			padding: 0
+			margin: 0
+			text-align: center
+			text-transform: uppercase
+			display: inline-block
+			font-size: 13px
+			cursor: pointer
+			margin: 0px 10px			
+			padding-bottom: 5px
+.portfolio_item
+	display: none
+	padding: 0	
+	img
+		width: 100%	
+	.p_item_hover
+		opacity: 0
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		text-align: center
+		padding-top: 30%
+		background-color: rgba(0,0,0,0.8)
+		transition: all 0.5s
+		h3
+			text-transform: uppercase
+			font-weight: 500
+			font-size: 16px
+		p
+			display: block
+			margin-top: 20px
+		a
+			display: inline-block
+			margin-top: 10px
+			padding: 5px 30px	 	
+	&:hover .p_item_hover
+		opacity: 1
+		padding: 19%	
+.p_item_description
+	max-width: 500px
+	margin: auto
+	text-align: center
+	h3
+		display: inline-block
+		margin-top: 20px
+		text-transform: uppercase
+		font-weight: 500
+	p
+		text-align: left
+		display: inline-block
+		margin: 0px 30px 30px 30px
+	img
+		width: 100%
+		margin: auto	
+	.modal_box_content
+		position: relative	
+			

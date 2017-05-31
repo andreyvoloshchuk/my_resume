@@ -1,0 +1,32 @@
+/*
+Error: Inconsistent indentation: 4 spaces were used for indentation, but the rest of the document was indented using 1 tab.
+        on line 28 of C:\Users\Andriy\Downloads\wordpress-landing-page-lesson-master\wordpress-landing-page-lesson-master\__clean_html_original\css\sass\skins\tomato.sass
+
+23: .color_bg
+24: 	background-color: $color
+25: .color_border
+26: 	border-color: $color
+27: .main_color_bg
+28:     background-color: $main_color
+
+Backtrace:
+C:\Users\Andriy\Downloads\wordpress-landing-page-lesson-master\wordpress-landing-page-lesson-master\__clean_html_original\css\sass\skins\tomato.sass:28
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:473:in `block in tabulate'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:431:in `each'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:431:in `each_with_index'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:431:in `tabulate'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:396:in `_to_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/engine.rb:285:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:396:in `run'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/sass_scss.rb:62:in `process_result'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.4.9/bin/sass:13:in `<top (required)>'
+C:/Program Files (x86)/Koala/bin/sass:18:in `load'
+C:/Program Files (x86)/Koala/bin/sass:18:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Inconsistent indentation: 4 spaces were used for indentation, but the rest of the document was indented using 1 tab.\A         on line 28 of C:\Users\Andriy\Downloads\wordpress-landing-page-lesson-master\wordpress-landing-page-lesson-master\__clean_html_original\css\sass\skins\tomato.sass\A \A 23: .color_bg\A 24: 	background-color: $color\A 25: .color_border\A 26: 	border-color: $color\A 27: .main_color_bg\A 28:     background-color: $main_color"; }
